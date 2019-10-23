@@ -26,6 +26,7 @@ jobs:
           command: |
             conda create -n ${ENV_NAME} -c conda-forge python=3.7 pyyaml pytest pytest-cov codecov
             source activate ${ENV_NAME}
+            conda list
             python setup.py install
       - run:
           name: Run Tests
