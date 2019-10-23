@@ -28,7 +28,7 @@ CLASSIFIERS = [
     'Topic :: Scientific/Engineering',
 ]
 
-INSTALL_REQUIRES = []
+INSTALL_REQUIRES = ['attrs']
 PYTHON_REQUIRES = '>=3.6'
 DESCRIPTION = 'Utility package for accessing test/sample data hosted on ftp.cgd.ucar.edu/archive/aletheia-data'
 
