@@ -41,6 +41,10 @@ class FTPDownloader(object):
         self.host = host
         self.ftp = ftp
 
+    def close(self):
+        """Quit and close the connection"""
+        self.ftp.quit()
+
     def download(self, filename, src_dir='archive/aletheia-data/', dst_dir=None):
         """Download file from specified directory on the FTP.
 

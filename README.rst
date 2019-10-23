@@ -28,3 +28,15 @@ aletheia-data can be installed from PyPI with pip:
 .. code-block:: bash
 
     pip install aletheia-data
+
+
+Usage
+------
+
+.. code-block:: python
+
+  >>> from aletheia_data import FTPDownloader
+  >>> f = FTPDownloader()
+  >>> f.connect()
+  >>> f.download(filename='test.sh')
+  >>> f.close()
