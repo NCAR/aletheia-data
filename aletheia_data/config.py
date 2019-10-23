@@ -9,7 +9,7 @@ logger = logging.getLogger('aletheia')
 confdir = Path('~').expanduser() / '.aletheia'
 cachedir = confdir / 'data'
 
-cachedir.mkdir(exist_ok=True)
+cachedir.mkdir(parents=True, exist_ok=True)
 
 defaults = {'cache_dir': cachedir, 'conf_file': confdir / 'config.yaml', 'logging': 'INFO'}
 
