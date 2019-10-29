@@ -12,11 +12,11 @@ if exists('README.rst'):
 else:
     long_description = ''
 
-DISTNAME = 'aletheia'
+DISTNAME = 'aletheia-data'
 LICENSE = 'Apache 2.0'
 AUTHOR = 'Xdev Team'
 AUTHOR_EMAIL = 'xdev@ucar.edu'
-URL = 'https://github.com/NCAR/aletheia'
+URL = 'https://github.com/NCAR/aletheia-data'
 CLASSIFIERS = [
     'Development Status :: 4 - Beta',
     'License :: OSI Approved :: Apache Software License',
@@ -28,9 +28,9 @@ CLASSIFIERS = [
     'Topic :: Scientific/Engineering',
 ]
 
-INSTALL_REQUIRES = ['attrs', 'pooch']
+INSTALL_REQUIRES = ['attrs']
 PYTHON_REQUIRES = '>=3.6'
-DESCRIPTION = 'Utility package for accessing test/sample data files'
+DESCRIPTION = 'Utility package for accessing test/sample data hosted on ftp.cgd.ucar.edu/archive/aletheia-data'
 
 
 setup(
