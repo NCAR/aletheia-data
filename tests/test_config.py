@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from aletheia_data import FTPDownloader, config
+from aletheia import FTPDownloader, config
 
 
 def test_download():
