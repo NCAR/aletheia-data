@@ -26,7 +26,7 @@ class FTPDownloader:
         blocksize=1024,
         **kwargs,
     ):
-        """[summary]
+        """
 
         Parameters
         ----------
@@ -229,6 +229,7 @@ def _mlsd2(ftp, path='.'):
     """
     lines = []
     minfo = []
+    _ = ftp.dir(path, lines.append)
     for line in lines:
         line = line.split()
         this = (
