@@ -28,9 +28,9 @@ CLASSIFIERS = [
     'Topic :: Scientific/Engineering',
 ]
 
-INSTALL_REQUIRES = ['attrs']
+INSTALL_REQUIRES = ['pooch', 'tqdm', 'requests-ftp']
 PYTHON_REQUIRES = '>=3.6'
-DESCRIPTION = 'Utility package for accessing test/sample data hosted on ftp.cgd.ucar.edu/archive/aletheia-data'
+DESCRIPTION = 'Utility package for fetching test/sample data files'
 
 
 setup(
