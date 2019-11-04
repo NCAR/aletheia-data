@@ -16,8 +16,24 @@ aletheia-data
 ==============
 
 
+Utility package for accessing data files over HTTP and FTP
+from a server and storing them in a local directory. `aletheia-data` is built on top of `Pooch`_.
 
-Utility package for accessing test/sample data hosted on ftp.cgd.ucar.edu/archive/aletheia-data.
+`Pooch`_ provides the following functionality:
+
+- Download a file only if it’s not in the local storage.
+- Check the SHA256 hash to make sure the file is not corrupted or needs updating.
+- If the hash is different from the registry, Pooch will download a new version of the file.
+- If the hash still doesn’t match, Pooch will raise an exception warning of possible data corruption.
+
+
+By default, `pooch` has support for downloading files over HTTP only. `aletheia-data` extends `pooch` by adding
+support for downloading files over FTP.
+
+See pooch's documentation_ for more information.
+
+.. _documentation: https://www.fatiando.org/pooch/latest/index.html
+.. _pooch: https://github.com/fatiando/pooch
 
 
 Installation
@@ -35,10 +51,10 @@ Usage
 
 .. code-block:: python
 
-    Create a :class:`~aletheia_data.AletheiaPooch` for a release (v0.1):
+    Create an `AletheiaPooch` for a release (v0.1):
 
     >>> from aletheia_data import create
-    >>> p = create(path="myproject",
+    >>> p = create(path="/Users/abanihi/.aletheia/data",
     ...              base_url="ftp://ftp.cgd.ucar.edu/archive/aletheia-data/tutorial-data/",
     ...              version="v0.1",
     ...              registry={'rasm.nc': '28498798c1934277268ef806112c001a8281b59c18228a17797df38defad8dfb'})
@@ -49,7 +65,7 @@ Usage
     >>> print(p.registry)
     {'rasm.nc': '28498798c1934277268ef806112c001a8281b59c18228a17797df38defad8dfb'}
 
-    Fetch the file from remote server and download a copy in the local storage:
+    Fetch the file from remote server and persist a copy in the local storage:
 
     >>> path = p.fetch("rasm.nc")
     Downloading data file 'rasm.nc' from remote data store
