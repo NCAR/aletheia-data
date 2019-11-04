@@ -28,7 +28,7 @@ CLASSIFIERS = [
     'Topic :: Scientific/Engineering',
 ]
 
-INSTALL_REQUIRES = ['pooch', 'tqdm']
+INSTALL_REQUIRES = ['pooch', 'tqdm', 'requests-ftp']
 PYTHON_REQUIRES = '>=3.6'
 DESCRIPTION = 'Utility package for fetching test/sample data files'
 
