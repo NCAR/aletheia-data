@@ -1,3 +1,7 @@
+
+⚠️ Warning: This repository is no longer maintained. The FTP Downloader is now available in Pooch
+
+
 .. image:: https://img.shields.io/circleci/project/github/NCAR/aletheia-data/master.svg?style=for-the-badge&logo=circleci
     :target: https://circleci.com/gh/NCAR/aletheia-data/tree/master
 
